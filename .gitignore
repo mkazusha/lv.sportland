@@ -1,0 +1,17 @@
+
+/.gradle/
+/build/
+/build/classes/java/test/
+
+.gradle
+/build/
+gradlew.bat
+
+gradle-app.setting
+
+
+!gradle-wrapper.jar
+
+
+.gradletasknamecache
+

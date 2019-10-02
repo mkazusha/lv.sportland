@@ -58,7 +58,12 @@ public class ManShoesSectionStepDefs {
 
     @Then("we create txt file with with info about products")
     public void create_txt_file() throws IOException {
-        menFootballShoesPage.collectInformation_txt();
+        menFootballShoesPage.collectInformationTxt();
+    }
+
+    @Then("we create json file with the same information")
+    public void create_json_file() {
+
     }
 
     @Then("we close browser")

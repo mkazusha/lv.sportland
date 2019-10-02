@@ -3,6 +3,7 @@ package webPages;
 import baseFunc.BaseFunc;
 
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -18,6 +19,7 @@ public class MenFootballShoesPage {
     private final By SORTING_OPTIONS = By.xpath(".//select");
     private final By FILTER_NAMES = By.xpath(".//fieldset/ol/li/label");
     private final By FILTER_CHECKBOX = By.xpath(".//input[@type='checkbox']");
+    private final By PRODUCT_INFORMATION = By.xpath(".//a[@class = 'spodb-product-card']");
 
     private BaseFunc baseFunc;
 
@@ -49,9 +51,16 @@ public class MenFootballShoesPage {
         }
     }
 
-    public void collectInformation_txt() throws IOException {
+    public void collectInformationTxt() throws IOException {
+        List<WebElement> information = baseFunc.getAllElements(PRODUCT_INFORMATION);
         File file = new File("myFirstFile.txt");
         FileWriter fw = new FileWriter(file);
-        fw.write("Hello");
+        for (WebElement info: information) {
+            fw.write(info.getText() + "\r\n");
+        }
+        fw.close();
     }
+
+
+
 }
