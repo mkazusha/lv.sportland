@@ -12,7 +12,7 @@ Feature: Check men footbal shoes section
     Then on page appeared only "Nike" brand shoes
     And all products are on sale
     And we create txt file with with info about products
-   # And We create json file with the same information
+    And we create json file with the same information
     And we close browser
 
 

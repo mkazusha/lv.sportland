@@ -3,6 +3,7 @@ package webPages;
 import baseFunc.BaseFunc;
 
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -50,13 +51,16 @@ public class MenFootballShoesPage {
         }
     }
 
-    public void collectInformation_txt() throws IOException {
+    public void collectInformationTxt() throws IOException {
         List<WebElement> information = baseFunc.getAllElements(PRODUCT_INFORMATION);
-        File file = new File("menFootbalShoes.txt");
+        File file = new File("myFirstFile.txt");
         FileWriter fw = new FileWriter(file);
         for (WebElement info: information) {
             fw.write(info.getText() + "\r\n");
         }
         fw.close();
     }
+
+
+
 }
