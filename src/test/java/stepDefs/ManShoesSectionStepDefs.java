@@ -7,7 +7,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import webPages.MenFootballShoesPage;
 import webPages.ProductsPage;
-;import java.io.IOException;
+;import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
 
 public class ManShoesSectionStepDefs {
@@ -62,8 +63,8 @@ public class ManShoesSectionStepDefs {
     }
 
     @Then("we create json file with the same information")
-    public void create_json_file() {
-
+    public void create_json_file() throws FileNotFoundException {
+        menFootballShoesPage.createJsonFile();
     }
 
     @Then("we close browser")
