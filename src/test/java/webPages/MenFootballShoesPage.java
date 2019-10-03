@@ -67,7 +67,7 @@ public class MenFootballShoesPage {
         JSONObject obj = new JSONObject();
         JSONArray list = new JSONArray();
         for (int i = 0; i < information.size(); i++) {
-            list.add(information.get(i).getText() + "\r\n");
+            list.add(information.get(i).getText());
         }
         obj.put("Items", list);
 
